@@ -1,18 +1,33 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* Navbar */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 10px;
+  }
+}
 
 .nav {
   display: flex;
-  width: 80%;
   margin: auto;
 }
 
 .nav-logo {
-  flex: 1;
+  margin: 1.63em 0 1.75em 4.37em;
+  border: 1px solid blue;
+
+  /* padding-left: 4.37em; */
+}
+
+.logo {
+  width: 15.37em;
+  height: 6.36em;
 }
 
 .nav-menu {
@@ -21,24 +36,123 @@
 
 .nav-list {
   display: flex;
-  justify-content: space-evenly;
-  height: 100%;
+  justify-content: flex-end;
   align-items: center;
+  border: 1px solid red;
+  margin: 3.31em 2.5em 3.43em 0;
 }
 
 .nav-item {
   list-style-type: none;
   justify-content: center;
+  border: 1px solid blue;
+  padding: 0.62em;
+  margin-left: 5.87em;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
 }
 
 .nav-link {
   text-decoration: none;
   color: #252b42;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  border: 1px solid yellow;
 }
 
 .nav-link:hover {
   color: #fa4a0c;
+}
+
+/* Hero Section */
+
+.hero {
+  display: block;
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  text-align: center;
+  height: 38.68em;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.hero-text-container {
+  /* padding: 4.56em 13.56em 13.75em 13.59em; */
+  display: block;
+  width: 62.81em;
+  height: 20.37em;
+  border: 1px solid red;
+  margin: auto;
+  margin-top: 4.56em;
+}
+
+.hero-title {
+  color: #f6f6f6;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.43rem;
+  line-height: 2.25rem;
+}
+
+.hero-description {
+  display: block;
+  color: #fff;
+  font-size: 3.62rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin: auto;
+  border: 1px solid green;
+  padding: 0.62rem 0;
+  line-height: 5rem;
+}
+
+.hero-download {
+  color: #f6f6f6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0.43em;
+  padding: 1.06rem 0 3rem 0;
+  border: 1px solid yellow;
+  /* line-height: 2.37rem; */
+}
+
+.hero-store {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.37em;
+}
+
+.hero-playstore {
+  background-color: #fa4a0c;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 30px;
+  padding: 1rem 3.65rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-right: 2.12rem;
+  cursor: pointer;
+}
+
+.hero-appstore {
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 30px;
+  padding: 1rem 3.65rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-mobile-img img {
+  border: 1px solid salmon;
+  width: 34.25em;
+  height: 40em;
 }
