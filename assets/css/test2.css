@@ -1,21 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 /* Navbar */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* .nav-icon {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-  cursor: pointer;
-} */
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 10px;
+  }
+}
 
 .nav {
   display: flex;
@@ -24,18 +20,11 @@
 
 .nav-logo {
   margin: 1.63em 0 1.75em 4.37em;
-
-  /* padding-left: 4.37em; */
 }
 
 .logo {
   width: 15.37em;
   height: 6.36em;
-}
-
-.nav-icon {
-  display: none;
-  font-size: 2em;
 }
 
 .nav-menu {
@@ -85,11 +74,9 @@
   text-align: center;
   height: 38.68em;
   width: 100%;
-  border: 1px solid transparent;
 }
 
 .hero-text-container {
-  /* padding: 4.56em 13.56em 13.75em 13.59em; */
   display: block;
   width: 62.81em;
   height: 20.37em;
@@ -144,19 +131,6 @@
   font-weight: bold;
   margin-right: 2.12rem;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
-}
-
-.hero-playstore:hover,
-.hero-playstore:active,
-.hero-playstore:active {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .hero-appstore {
@@ -168,19 +142,6 @@
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
-}
-
-.hero-appstore:hover,
-.hero-appstore:active,
-.hero-appstore:active {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .hero-mobile-img img {
@@ -221,7 +182,7 @@
   filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.15));
 }
 
-.account-img img {
+.account-img {
   width: 18.87em;
   height: 32.81em;
 }
@@ -232,6 +193,7 @@
   justify-content: center;
   flex: 1;
   margin: 4.87em 9.62em 3.31em 0;
+  width: 300em;
 }
 
 .account-title {
@@ -316,11 +278,6 @@
   filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.15));
 }
 
-.explore-img img {
-  width: 16.81em;
-  height: 32.81em;
-}
-
 /* Checkout */
 .checkout-container {
   display: flex;
@@ -332,11 +289,6 @@
   margin-top: 4.87em;
   filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.15));
   margin-bottom: 13.43em;
-}
-
-.checkout-img img {
-  width: 17.37em;
-  height: 31.93em;
 }
 
 .checkout-text-container {
@@ -456,248 +408,10 @@
   margin-left: 5.71em;
 }
 
-.footer-logo img {
-  width: 15.37em;
-  height: 6.37em;
-}
-
-.footer-icon .twitter {
-  width: 2.08em;
-  height: 1.69em;
-}
-
 .footer-icon .facebook {
   margin: 0 1.5em;
-  width: 2em;
-  height: 2em;
-}
-
-.footer-icon .instagram {
-  width: 2em;
-  height: 2em;
 }
 
 .footer-copyright {
   margin-right: 2.18em;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.75em;
-}
-
-/* sm screen */
-
-@media screen and (max-width: 991px) {
-  html,
-  body {
-    font-size: 14px;
-  }
-
-  .footer {
-    flex-direction: column;
-  }
-
-  .footer-logo {
-    margin: 0;
-  }
-
-  .footer-icon {
-    margin: 1em 0;
-  }
-
-  .footer-icon .twitter {
-    width: 2.08em;
-    height: 1.69em;
-  }
-
-  .footer-icon .facebook {
-    margin: 0 1.5em;
-  }
-
-  .footer-copyright {
-    margin: 0;
-  }
-
-  /* Content */
-
-  .line {
-    width: 100%;
-  }
-
-  /* Create an account */
-  .account-container {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .account-img {
-    margin: 1em 0;
-  }
-
-  .account-text-container {
-    margin: 1em;
-    text-align: center;
-    line-height: 3em;
-  }
-
-  /* Explore varieties */
-  .explore-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .explore-text-container {
-    text-align: center;
-    margin: 1em;
-    line-height: 3em;
-  }
-
-  .explore-img {
-    margin: 1em 0;
-  }
-
-  /* Checkout */
-  .checkout-container {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .checkout-img {
-    margin: 1em 0;
-  }
-
-  .checkout-text-container {
-    margin: 1em;
-    text-align: center;
-    line-height: 3em;
-  }
-
-  /* Hero Section */
-
-  .hero-container {
-    height: min-content;
-  }
-
-  .hero {
-    background: none;
-    height: min-content;
-  }
-
-  .hero-text-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-title {
-    color: #737373;
-  }
-
-  .hero-description {
-    color: #252b42;
-  }
-
-  .hero-download {
-    color: #737373;
-  }
-
-  .hero-container {
-    display: flex;
-  }
-
-  .hero-store {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-playstore {
-    margin-right: 0;
-    margin-bottom: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero-playstore:hover,
-  .hero-playstore:active,
-  .hero-playstore:active {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .hero-appstore {
-    color: #fa4a0c;
-    border: 1px solid #fa4a0c;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1em;
-  }
-
-  .hero-appstore:hover,
-  .hero-appstore:active,
-  .hero-appstore:active {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Navbar */
-
-  .nav-logo {
-    margin: 0;
-  }
-
-  .nav-icon {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 1em;
-    flex: 1;
-    cursor: pointer;
-    background-color: blue;
-  }
-
-  .nav-menu {
-    visibility: hidden;
-    display: block;
-    transition: 2s;
-    position: absolute;
-    width: 0;
-    top: 90px;
-    right: 0;
-  }
-
-  .nav-menu.active {
-    display: block;
-    visibility: visible;
-    background-color: wheat;
-    margin: auto;
-    top: 90px;
-    right: 0;
-    width: 100%;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-    background-color: yellow;
-  }
-
-  .nav-item {
-    margin: 0;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  html,
-  body {
-    font-size: 12px;
-  }
-
-  .hero-mobile-img img {
-    width: 100%;
-    height: 40em;
-  }
 }
