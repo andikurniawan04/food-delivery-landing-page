@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -487,8 +486,15 @@
 /* sm screen */
 
 @media screen and (max-width: 991px) {
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
   html,
   body {
+    width: 100%;
+    overflow-x: hidden;
     font-size: 14px;
   }
 
@@ -572,6 +578,11 @@
     margin: 1em;
     text-align: center;
     line-height: 3em;
+  }
+
+  /* Download */
+  .download-description {
+    line-height: 2em;
   }
 
   /* Hero Section */
