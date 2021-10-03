@@ -25,13 +25,13 @@
             <a href="#" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Product</a>
+            <a href="#product" class="nav-link">Product</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Faq</a>
+            <a href="#faq" class="nav-link">Faq</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </div>
@@ -41,10 +41,10 @@
     </nav>
 
     <!-- Hero Section  -->
-    <div class="hero-container">
+    <div class="hero-container" id="product">
       <div class="hero">
         <div class="hero-text-container">
-          <h1 class="hero-title">Food app</h1>
+          <h1 class="hero-title">Food apps</h1>
           <h1 class="hero-description">
             <p>Why stay hungry when</p>
             <p>you can order form Bella Onojie</p>
@@ -56,19 +56,19 @@
           <button class="hero-appstore">App Store</button>
         </div>
         <div class="hero-mobile-img">
-          <img src="assets/img/mobile1.png" alt="download" />
+          <img src="assets/img/mobile1.png" alt="download" loading="lazy" />
         </div>
       </div>
     </div>
     <!-- Content -->
-    <div class="content">
+    <div class="content" id="faq">
       <hr class="line" />
       <h1 class="content-title">How the app works</h1>
 
       <!-- Create an account -->
       <div class="account-container">
         <div class="account-img" data-aos="fade-right">
-          <img src="assets/img/mobile2.png" alt="account" />
+          <img src="assets/img/mobile2.png" alt="account" loading="lazy" />
         </div>
         <div class="account-text-container" data-aos="fade-left">
           <h2 class="account-title">Create an account</h2>
@@ -85,14 +85,14 @@
           <p class="explore-description2">Shop for your favorite meals or drinks and enjoy while doing it.</p>
         </div>
         <div class="explore-img" data-aos="zoom-in-left">
-          <img src="assets/img/mobile3.png" alt="explore" />
+          <img src="assets/img/mobile3.png" alt="explore" loading="lazy" />
         </div>
       </div>
 
       <!-- Checkout -->
       <div class="checkout-container">
         <div class="checkout-img" data-aos="zoom-out-right">
-          <img src="assets/img/mobile4.png" alt="checkout" />
+          <img src="assets/img/mobile4.png" alt="checkout" loading="lazy" />
         </div>
         <div class="checkout-text-container" data-aos="zoom-out-left">
           <h2 class="checkout-title">Checkout</h2>
@@ -115,16 +115,21 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">
+    <div class="footer" id="contact">
       <div class="footer-logo">
         <a href="#"><img src="assets/img/logo.png" alt="footer logo" /></a>
       </div>
       <div class="footer-icon">
-        <img class="twitter" src="assets/img/icons/twitter.svg" alt="twitter" />
-        <img class="facebook" src="assets/img/icons/facebook.svg" alt="facebook" />
-        <img class="instagram" src="assets/img/icons/instagram.svg" alt="instagram" />
+        <a href="#"><img class="twitter" src="assets/img/icons/twitter.svg" alt="twitter" /></a>
+        <a href="#"><img class="facebook" src="assets/img/icons/facebook.svg" alt="facebook" /></a>
+        <a href="#"><img class="instagram" src="assets/img/icons/instagram.svg" alt="instagram" /></a>
       </div>
       <div class="footer-copyright"><p>Copywright 2020 Bella Onojie.com</p></div>
+    </div>
+
+    <!-- Scroll Up -->
+    <div class="scroll-up" id="scrollBtn" onclick="scrollUp()">
+    <i class="fas fa-chevron-up scroll-icon"></i>
     </div>
 
     <!-- Script -->

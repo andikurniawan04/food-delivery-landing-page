@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Navbar */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -413,6 +417,7 @@
 .download-store {
   display: flex;
   justify-content: center;
+  padding: 1em 0;
 }
 
 .download-playstore {
@@ -427,6 +432,19 @@
   font-weight: bold;
   margin-right: 1rem;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.download-playstore:hover,
+.download-playstore:active,
+.download-playstore:active {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .download-appstore {
@@ -438,6 +456,19 @@
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.download-appstore:hover,
+.download-appstore:active,
+.download-appstore:active {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Footer */
@@ -483,6 +514,25 @@
   font-size: 0.75em;
 }
 
+/* Scroll Up */
+.scroll-up {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 20%;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  background-color: #fa4a0c;
+}
+
+.scroll-icon {
+  color: #fff;
+}
+
 /* sm screen */
 
 @media screen and (max-width: 991px) {
@@ -498,29 +548,130 @@
     font-size: 14px;
   }
 
-  .footer {
+  /* Navbar */
+
+  .nav-logo {
+    margin: 0;
+  }
+
+  .nav-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1em;
+    flex: 1;
+    color: #737373;
+    margin-top: 0.8em;
+  }
+
+  .nav-icon #icon {
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    visibility: hidden;
+    display: block;
+    transition: 0.8s;
+    position: absolute;
+    width: 0;
+    top: 90px;
+    right: 0;
+  }
+
+  .nav-menu.active {
+    display: block;
+    visibility: visible;
+    background-color: wheat;
+    margin: auto;
+    top: 90px;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-list {
+    display: flex;
     flex-direction: column;
-  }
-
-  .footer-logo {
+    justify-content: center;
+    align-items: center;
     margin: 0;
+    background-color: #fafafa;
   }
 
-  .footer-icon {
-    margin: 1em 0;
+  .nav-item {
+    margin: 1.5em 0;
+    text-align: center;
+    padding: 1.5em 0;
+    width: 100%;
   }
 
-  .footer-icon .twitter {
-    width: 2.08em;
-    height: 1.69em;
+  .nav-link {
+    font-size: 1.2em;
   }
 
-  .footer-icon .facebook {
-    margin: 0 1.5em;
+  /* Hero Section */
+
+  .hero-container {
+    height: min-content;
   }
 
-  .footer-copyright {
-    margin: 0;
+  .hero {
+    background: none;
+    height: min-content;
+  }
+
+  .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-title {
+    color: #737373;
+  }
+
+  .hero-description {
+    color: #252b42;
+  }
+
+  .hero-download {
+    color: #737373;
+    margin: 0 0.5em;
+  }
+
+  .hero-container {
+    display: flex;
+  }
+
+  .hero-store {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-playstore {
+    margin-right: 0;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-playstore:hover,
+  .hero-playstore:active,
+  .hero-playstore:active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-appstore {
+    color: #fa4a0c;
+    border: 1px solid #fa4a0c;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+  }
+
+  .hero-appstore:hover,
+  .hero-appstore:active,
+  .hero-appstore:active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   }
 
   /* Content */
@@ -585,119 +736,37 @@
     line-height: 2em;
   }
 
-  /* Hero Section */
+  /* Footer */
 
-  .hero-container {
-    height: min-content;
-  }
-
-  .hero {
-    background: none;
-    height: min-content;
-  }
-
-  .hero-text-container {
-    display: flex;
+  .footer {
     flex-direction: column;
-    width: 100%;
-    height: auto;
   }
 
-  .hero-title {
-    color: #737373;
-  }
-
-  .hero-description {
-    color: #252b42;
-  }
-
-  .hero-download {
-    color: #737373;
-  }
-
-  .hero-container {
-    display: flex;
-  }
-
-  .hero-store {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-playstore {
-    margin-right: 0;
-    margin-bottom: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero-playstore:hover,
-  .hero-playstore:active,
-  .hero-playstore:active {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .hero-appstore {
-    color: #fa4a0c;
-    border: 1px solid #fa4a0c;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1em;
-  }
-
-  .hero-appstore:hover,
-  .hero-appstore:active,
-  .hero-appstore:active {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Navbar */
-
-  .nav-logo {
+  .footer-logo {
     margin: 0;
   }
 
-  .nav-icon {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 1em;
-    flex: 1;
-    cursor: pointer;
-    background-color: blue;
+  .footer-icon {
+    margin: 1em 0;
   }
 
-  .nav-menu {
-    visibility: hidden;
-    display: block;
-    transition: 2s;
-    position: absolute;
-    width: 0;
-    top: 90px;
-    right: 0;
+  .footer-icon .twitter {
+    width: 2.08em;
+    height: 1.69em;
   }
 
-  .nav-menu.active {
-    display: block;
-    visibility: visible;
-    background-color: wheat;
-    margin: auto;
-    top: 90px;
-    right: 0;
-    width: 100%;
+  .footer-icon .facebook {
+    margin: 0 1.5em;
   }
 
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .footer-copyright {
     margin: 0;
-
-    background-color: yellow;
   }
 
-  .nav-item {
-    margin: 0;
+  /* Scroll Up */
+  .scroll-up {
+    width: 2.8em;
+    height: 2.8em;
   }
 }
 
