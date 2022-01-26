@@ -1,6 +1,6 @@
 # Food Delivery Landing Page
 
-Responsive pixel perfect figma converting design [Figma Design](https://www.figma.com/community/file/893381127703378146)
+Responsive pixel perfect figma converting design [(Figma Design)](https://www.figma.com/community/file/893381127703378146)
 
 ### [Live Site](https://food-delivery-landing-page.herokuapp.com/)
 
